@@ -35,6 +35,9 @@
 		C911D86614616F5E007C5F92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D86514616F5E007C5F92 /* AudioToolbox.framework */; };
 		C911D86814616F6F007C5F92 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D86714616F6F007C5F92 /* CoreMedia.framework */; };
 		C911D86A14616F77007C5F92 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D86914616F77007C5F92 /* MediaPlayer.framework */; };
+		C911D86E14617063007C5F92 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D86C14617063007C5F92 /* NowPlayingViewController.m */; };
+		C911D86F14617063007C5F92 /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C911D86D14617063007C5F92 /* NowPlayingViewController.xib */; };
+		C911D87214617172007C5F92 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D87114617172007C5F92 /* LevelMeterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,11 @@
 		C911D86514616F5E007C5F92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C911D86714616F6F007C5F92 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C911D86914616F77007C5F92 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C911D86B14617063007C5F92 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
+		C911D86C14617063007C5F92 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingViewController.m; sourceTree = "<group>"; };
+		C911D86D14617063007C5F92 /* NowPlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NowPlayingViewController.xib; sourceTree = "<group>"; };
+		C911D87014617172007C5F92 /* LevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeterView.h; sourceTree = "<group>"; };
+		C911D87114617172007C5F92 /* LevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +127,6 @@
 		C911D7FF14616DBE007C5F92 = {
 			isa = PBXGroup;
 			children = (
-				C911D86914616F77007C5F92 /* MediaPlayer.framework */,
-				C911D86714616F6F007C5F92 /* CoreMedia.framework */,
-				C911D86514616F5E007C5F92 /* AudioToolbox.framework */,
-				C911D86314616F51007C5F92 /* CFNetwork.framework */,
-				C911D86114616F46007C5F92 /* QuartzCore.framework */,
 				C911D81414616DBF007C5F92 /* wmnf */,
 				C911D84614616DBF007C5F92 /* wmnfTests */,
 				C911D80D14616DBF007C5F92 /* Frameworks */,
@@ -143,6 +146,11 @@
 		C911D80D14616DBF007C5F92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C911D86914616F77007C5F92 /* MediaPlayer.framework */,
+				C911D86714616F6F007C5F92 /* CoreMedia.framework */,
+				C911D86514616F5E007C5F92 /* AudioToolbox.framework */,
+				C911D86314616F51007C5F92 /* CFNetwork.framework */,
+				C911D86114616F46007C5F92 /* QuartzCore.framework */,
 				C911D80E14616DBF007C5F92 /* UIKit.framework */,
 				C911D81014616DBF007C5F92 /* Foundation.framework */,
 				C911D81214616DBF007C5F92 /* CoreGraphics.framework */,
@@ -162,6 +170,11 @@
 				C911D82114616DBF007C5F92 /* FirstViewController.m */,
 				C911D82314616DBF007C5F92 /* first.png */,
 				C911D82514616DBF007C5F92 /* first@2x.png */,
+				C911D87014617172007C5F92 /* LevelMeterView.h */,
+				C911D87114617172007C5F92 /* LevelMeterView.m */,
+				C911D86B14617063007C5F92 /* NowPlayingViewController.h */,
+				C911D86C14617063007C5F92 /* NowPlayingViewController.m */,
+				C911D86D14617063007C5F92 /* NowPlayingViewController.xib */,
 				C911D82714616DBF007C5F92 /* SecondViewController.h */,
 				C911D82814616DBF007C5F92 /* SecondViewController.m */,
 				C911D82A14616DBF007C5F92 /* second.png */,
@@ -286,6 +299,7 @@
 				C911D83314616DBF007C5F92 /* FirstViewController_iPad.xib in Resources */,
 				C911D83614616DBF007C5F92 /* SecondViewController_iPhone.xib in Resources */,
 				C911D83914616DBF007C5F92 /* SecondViewController_iPad.xib in Resources */,
+				C911D86F14617063007C5F92 /* NowPlayingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +340,8 @@
 				C911D82914616DBF007C5F92 /* SecondViewController.m in Sources */,
 				C911D85D14616E7E007C5F92 /* AudioStreamer.m in Sources */,
 				C911D86014616EDD007C5F92 /* UIDevice+Hardware.m in Sources */,
+				C911D86E14617063007C5F92 /* NowPlayingViewController.m in Sources */,
+				C911D87214617172007C5F92 /* LevelMeterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
