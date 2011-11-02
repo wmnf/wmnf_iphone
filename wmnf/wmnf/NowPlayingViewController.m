@@ -20,6 +20,12 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <CFNetwork/CFNetwork.h>
 
+NSString * const HD1_HIGH_QUALITY = @"http://stream.wmnf.org:8000/wmnf_high_quality";
+NSString * const HD2 = @"http://131.247.176.1:8000/stream";
+NSString * const HD3 = @"http://stream.wmnf.org:8000/wmnf_hd3";
+NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
+
+
 @implementation NowPlayingViewController
 
 @synthesize currentArtist, currentTitle;
@@ -153,14 +159,24 @@
     
 	[self destroyStreamer];
 	
-	NSString *escapedValue =
+//	NSString *escapedValue =
+//    [(NSString *)CFURLCreateStringByAddingPercentEscapes(
+//                                                         nil,
+//                                                         (CFStringRef)downloadSourceField.text,
+//                                                         NULL,
+//                                                         NULL,
+//                                                         kCFStringEncodingUTF8)
+//     autorelease];
+
+    NSString *escapedValue =
     [(NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                          nil,
-                                                         (CFStringRef)downloadSourceField.text,
+                                                         (CFStringRef)HD1_HIGH_QUALITY,
                                                          NULL,
                                                          NULL,
                                                          kCFStringEncodingUTF8)
      autorelease];
+
     
 	NSURL *url = [NSURL URLWithString:escapedValue];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
