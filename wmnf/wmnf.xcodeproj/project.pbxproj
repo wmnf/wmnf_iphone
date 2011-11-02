@@ -40,6 +40,14 @@
 		C911D87214617172007C5F92 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D87114617172007C5F92 /* LevelMeterView.m */; };
 		C911D8761461724D007C5F92 /* StreamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D8741461724D007C5F92 /* StreamsViewController.m */; };
 		C911D8771461724D007C5F92 /* StreamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C911D8751461724D007C5F92 /* StreamsViewController.xib */; };
+		C9AE7EEA14617C5A003666A2 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE214617C5A003666A2 /* loadingbutton.png */; };
+		C9AE7EEB14617C5A003666A2 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE314617C5A003666A2 /* loadingbutton@2x.png */; };
+		C9AE7EEC14617C5A003666A2 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE414617C5A003666A2 /* pausebutton.png */; };
+		C9AE7EED14617C5A003666A2 /* pausebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE514617C5A003666A2 /* pausebutton@2x.png */; };
+		C9AE7EEE14617C5A003666A2 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE614617C5A003666A2 /* playbutton.png */; };
+		C9AE7EEF14617C5A003666A2 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE714617C5A003666A2 /* playbutton@2x.png */; };
+		C9AE7EF014617C5A003666A2 /* stopbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE814617C5A003666A2 /* stopbutton.png */; };
+		C9AE7EF114617C5A003666A2 /* stopbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE914617C5A003666A2 /* stopbutton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,14 @@
 		C911D8731461724D007C5F92 /* StreamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamsViewController.h; sourceTree = "<group>"; };
 		C911D8741461724D007C5F92 /* StreamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamsViewController.m; sourceTree = "<group>"; };
 		C911D8751461724D007C5F92 /* StreamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamsViewController.xib; sourceTree = "<group>"; };
+		C9AE7EE214617C5A003666A2 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
+		C9AE7EE314617C5A003666A2 /* loadingbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingbutton@2x.png"; sourceTree = "<group>"; };
+		C9AE7EE414617C5A003666A2 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
+		C9AE7EE514617C5A003666A2 /* pausebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausebutton@2x.png"; sourceTree = "<group>"; };
+		C9AE7EE614617C5A003666A2 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		C9AE7EE714617C5A003666A2 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
+		C9AE7EE814617C5A003666A2 /* stopbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopbutton.png; sourceTree = "<group>"; };
+		C9AE7EE914617C5A003666A2 /* stopbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stopbutton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +189,7 @@
 				C911D85C14616E7E007C5F92 /* AudioStreamer.m */,
 				C911D82014616DBF007C5F92 /* FirstViewController.h */,
 				C911D82114616DBF007C5F92 /* FirstViewController.m */,
+				C9AE7EE114617C5A003666A2 /* Images */,
 				C911D82314616DBF007C5F92 /* first.png */,
 				C911D82514616DBF007C5F92 /* first@2x.png */,
 				C911D87014617172007C5F92 /* LevelMeterView.h */,
@@ -226,6 +243,21 @@
 				C911D84914616DBF007C5F92 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9AE7EE114617C5A003666A2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE7EE214617C5A003666A2 /* loadingbutton.png */,
+				C9AE7EE314617C5A003666A2 /* loadingbutton@2x.png */,
+				C9AE7EE414617C5A003666A2 /* pausebutton.png */,
+				C9AE7EE514617C5A003666A2 /* pausebutton@2x.png */,
+				C9AE7EE614617C5A003666A2 /* playbutton.png */,
+				C9AE7EE714617C5A003666A2 /* playbutton@2x.png */,
+				C9AE7EE814617C5A003666A2 /* stopbutton.png */,
+				C9AE7EE914617C5A003666A2 /* stopbutton@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +341,14 @@
 				C911D83914616DBF007C5F92 /* SecondViewController_iPad.xib in Resources */,
 				C911D86F14617063007C5F92 /* NowPlayingViewController.xib in Resources */,
 				C911D8771461724D007C5F92 /* StreamsViewController.xib in Resources */,
+				C9AE7EEA14617C5A003666A2 /* loadingbutton.png in Resources */,
+				C9AE7EEB14617C5A003666A2 /* loadingbutton@2x.png in Resources */,
+				C9AE7EEC14617C5A003666A2 /* pausebutton.png in Resources */,
+				C9AE7EED14617C5A003666A2 /* pausebutton@2x.png in Resources */,
+				C9AE7EEE14617C5A003666A2 /* playbutton.png in Resources */,
+				C9AE7EEF14617C5A003666A2 /* playbutton@2x.png in Resources */,
+				C9AE7EF014617C5A003666A2 /* stopbutton.png in Resources */,
+				C9AE7EF114617C5A003666A2 /* stopbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +585,7 @@
 				C911D85314616DBF007C5F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C911D85414616DBF007C5F92 /* Build configuration list for PBXNativeTarget "wmnfTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +594,7 @@
 				C911D85614616DBF007C5F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
