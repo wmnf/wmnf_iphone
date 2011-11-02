@@ -1,21 +1,21 @@
 //
-//  SecondViewController.m
+//  FirstViewController.m
 //  wmnf
 //
-//  Created by Matthew Cowley on 10/28/11.
+//  Created by Matthew Cowley on 11/2/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "FirstViewController.h"
 
-@implementation SecondViewController
+@implementation FirstViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.title = NSLocalizedString(@"First", @"First");
+        self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
 }
