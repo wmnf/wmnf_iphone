@@ -38,6 +38,8 @@
 		C911D86E14617063007C5F92 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D86C14617063007C5F92 /* NowPlayingViewController.m */; };
 		C911D86F14617063007C5F92 /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C911D86D14617063007C5F92 /* NowPlayingViewController.xib */; };
 		C911D87214617172007C5F92 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D87114617172007C5F92 /* LevelMeterView.m */; };
+		C911D8761461724D007C5F92 /* StreamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D8741461724D007C5F92 /* StreamsViewController.m */; };
+		C911D8771461724D007C5F92 /* StreamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C911D8751461724D007C5F92 /* StreamsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		C911D86D14617063007C5F92 /* NowPlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NowPlayingViewController.xib; sourceTree = "<group>"; };
 		C911D87014617172007C5F92 /* LevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeterView.h; sourceTree = "<group>"; };
 		C911D87114617172007C5F92 /* LevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeterView.m; sourceTree = "<group>"; };
+		C911D8731461724D007C5F92 /* StreamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamsViewController.h; sourceTree = "<group>"; };
+		C911D8741461724D007C5F92 /* StreamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamsViewController.m; sourceTree = "<group>"; };
+		C911D8751461724D007C5F92 /* StreamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +180,9 @@
 				C911D86B14617063007C5F92 /* NowPlayingViewController.h */,
 				C911D86C14617063007C5F92 /* NowPlayingViewController.m */,
 				C911D86D14617063007C5F92 /* NowPlayingViewController.xib */,
+				C911D8731461724D007C5F92 /* StreamsViewController.h */,
+				C911D8741461724D007C5F92 /* StreamsViewController.m */,
+				C911D8751461724D007C5F92 /* StreamsViewController.xib */,
 				C911D82714616DBF007C5F92 /* SecondViewController.h */,
 				C911D82814616DBF007C5F92 /* SecondViewController.m */,
 				C911D82A14616DBF007C5F92 /* second.png */,
@@ -300,6 +308,7 @@
 				C911D83614616DBF007C5F92 /* SecondViewController_iPhone.xib in Resources */,
 				C911D83914616DBF007C5F92 /* SecondViewController_iPad.xib in Resources */,
 				C911D86F14617063007C5F92 /* NowPlayingViewController.xib in Resources */,
+				C911D8771461724D007C5F92 /* StreamsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +351,7 @@
 				C911D86014616EDD007C5F92 /* UIDevice+Hardware.m in Sources */,
 				C911D86E14617063007C5F92 /* NowPlayingViewController.m in Sources */,
 				C911D87214617172007C5F92 /* LevelMeterView.m in Sources */,
+				C911D8761461724D007C5F92 /* StreamsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
