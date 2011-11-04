@@ -32,10 +32,14 @@
 	LevelMeterView *levelMeterView;
 	NSString *currentArtist;
 	NSString *currentTitle;
+    NSString *currentChannel;
+    NSArray *channelList;
 }
 
 @property (retain) NSString* currentArtist;
 @property (retain) NSString* currentTitle;
+@property (retain, nonatomic) NSArray* channelList;
+@property (retain, nonatomic) NSString* currentChannel;
 
 - (IBAction)buttonPressed:(id)sender;
 - (void)spinButton;
@@ -44,6 +48,7 @@
 - (void)playbackStateChanged:(NSNotification *)aNotification;
 - (void)updateProgress:(NSTimer *)updatedTimer;
 - (IBAction)sliderMoved:(UISlider *)aSlider;
+- (void)changeChannel:(int)channelIndex;
 
 @end
 

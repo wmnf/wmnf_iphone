@@ -25,10 +25,12 @@ NSString * const HD2 = @"http://131.247.176.1:8000/stream";
 NSString * const HD3 = @"http://stream.wmnf.org:8000/wmnf_hd3";
 NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 
-
 @implementation NowPlayingViewController
 
-@synthesize currentArtist, currentTitle;
+@synthesize currentArtist, currentTitle, channelList, currentChannel;
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -150,14 +152,19 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 //
 // Creates or recreates the AudioStreamer object.
 //
-- (void)createStreamer
+- (void)createStreamer:(NSString *)urlString
 {
+    NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+
 	if (streamer)
 	{
 		return;
 	}
-    
+    NSLog(@"1");
+    NSLog(@"nowplaing controller id:%@", self);
 	[self destroyStreamer];
+    NSLog(@"2");
 	
 //	NSString *escapedValue =
 //    [(NSString *)CFURLCreateStringByAddingPercentEscapes(
@@ -167,22 +174,29 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 //                                                         NULL,
 //                                                         kCFStringEncodingUTF8)
 //     autorelease];
-
+    NSLog(@"3");
+    NSLog(@"channel list = %@", self.channelList);
+    NSLog(@"channel index = %@", self.currentChannel);
+    //NSString *urlString = [self.channelList objectAtIndex:[self.currentChannel intValue]];
+    NSLog(@"url string = %@", urlString);
+    NSLog(@"4");
     NSString *escapedValue =
     [(NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                          nil,
-                                                         (CFStringRef)HD1_HIGH_QUALITY,
+                                                         (CFStringRef)urlString,
                                                          NULL,
                                                          NULL,
                                                          kCFStringEncodingUTF8)
      autorelease];
 
-    
+    NSLog(@"5");
+
 	NSURL *url = [NSURL URLWithString:escapedValue];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
 	
 	[self createTimers:YES];
-    
+    NSLog(@"6 ");
+
 	[[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(playbackStateChanged:)
@@ -195,6 +209,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	 name:ASUpdateMetadataNotification
 	 object:streamer];
 #endif
+    NSLog(@">>> Leaving %s <<<", __PRETTY_FUNCTION__);
 }
 
 //
@@ -207,6 +222,9 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+    currentChannel = 0;
 	
 	MPVolumeView *volumeView = [[[MPVolumeView alloc] initWithFrame:volumeSlider.bounds] autorelease];
 	[volumeSlider addSubview:volumeView];
@@ -301,7 +319,9 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	{
 		[downloadSourceField resignFirstResponder];
 		
-		[self createStreamer];
+		//[self createStreamer];
+        [self createStreamer:[channelList objectAtIndex:[currentChannel intValue]]];
+
 		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
 		[streamer start];
 	}
@@ -481,6 +501,24 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 }
 
 
+- (void)changeChannel:(int)channelIndex {
+    NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+
+    [streamer stop];
+    [self destroyStreamer];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.tabBarController.selectedIndex = 0;
+	[self createStreamer:[channelList objectAtIndex:channelIndex]];
+    [streamer start];
+
+    
+    self.currentChannel = [NSString stringWithFormat:@"%d", channelIndex];
+    NSLog(@"<<< Leaving %s >>>", __PRETTY_FUNCTION__);
+
+}
+
+
 //
 // textFieldShouldReturn:
 //
@@ -508,6 +546,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	[self destroyStreamer];
 	[self createTimers:NO];
 	[levelMeterView release];
+    [channelList release], channelList = nil;
 	[super dealloc];
 }
 

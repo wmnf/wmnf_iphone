@@ -11,7 +11,7 @@
 @implementation ChannelsViewController
 @synthesize channelsTableView;
 @synthesize contentsList;
-
+@synthesize nowPlayingViewController;
 
 - (void)dealloc
 {
@@ -118,7 +118,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
 	
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-	
+    switch ([indexPath row]) {
+        case 0: {NSLog(@"HD1"); break;}
+        case 1: {NSLog(@"HD2"); break;}
+        case 2: {NSLog(@"HD3"); break;}
+        case 3: {NSLog(@"HD4"); break;}
+    }
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.nowPlayingViewController changeChannel:[indexPath row]];
+//    [nowPlayingViewController changeChannel:[indexPath row]];
+
+    
     NSLog(@"<<< Leaving %s >>>", __PRETTY_FUNCTION__);
 }
 

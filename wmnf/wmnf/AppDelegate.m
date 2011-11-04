@@ -20,6 +20,7 @@
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
 @synthesize uiIsVisible;
+@synthesize nowPlayingViewController;
 
 - (void)dealloc
 {
@@ -34,8 +35,9 @@
     // Override point for customization after application launch.
     self.uiIsVisible = YES;
     UIViewController *viewController1, *viewController2;
+    nowPlayingViewController = [[[NowPlayingViewController alloc] initWithNibName:@"NowPlayingViewController" bundle:nil] autorelease];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[[NowPlayingViewController alloc] initWithNibName:@"NowPlayingViewController" bundle:nil] autorelease];
+        viewController1 = nowPlayingViewController;
         viewController2 = [[[ChannelsViewController alloc] initWithNibName:@"ChannelsViewController" bundle:nil] autorelease];
     } else {
         viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
