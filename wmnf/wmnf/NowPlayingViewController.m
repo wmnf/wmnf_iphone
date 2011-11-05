@@ -36,7 +36,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"NowPlaying", @"NowPlaying");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"194-note-2"];
     }
     return self;
 }

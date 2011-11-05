@@ -30,7 +30,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Streams", @"Streams");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"275-broadcast"];
     }
     return self;
 }
@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"WMNF 88.5FM", @"HD2 Bulls Radio", @"HD3 The Source", @"HD4 Music and HCC", nil];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"WMNF 88.5FM", @"HD2 USF Bulls Radio", @"HD3 The Source", @"HD4 HCC Hawk Radio + Music", nil];
     [self setContentsList:array];
     [array release], array = nil;
 }
