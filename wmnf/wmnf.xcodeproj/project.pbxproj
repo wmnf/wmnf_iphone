@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90D336514649B9F006910F3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90D336414649B9E006910F3 /* AVFoundation.framework */; };
 		C911D80F14616DBF007C5F92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D80E14616DBF007C5F92 /* UIKit.framework */; };
 		C911D81114616DBF007C5F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D81014616DBF007C5F92 /* Foundation.framework */; };
 		C911D81314616DBF007C5F92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911D81214616DBF007C5F92 /* CoreGraphics.framework */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C90D336414649B9E006910F3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C911D80A14616DBF007C5F92 /* wmnf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wmnf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911D80E14616DBF007C5F92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C911D81014616DBF007C5F92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90D336514649B9F006910F3 /* AVFoundation.framework in Frameworks */,
 				C911D86A14616F77007C5F92 /* MediaPlayer.framework in Frameworks */,
 				C911D86814616F6F007C5F92 /* CoreMedia.framework in Frameworks */,
 				C911D86614616F5E007C5F92 /* AudioToolbox.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		C911D80D14616DBF007C5F92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90D336414649B9E006910F3 /* AVFoundation.framework */,
 				C911D86914616F77007C5F92 /* MediaPlayer.framework */,
 				C911D86714616F6F007C5F92 /* CoreMedia.framework */,
 				C911D86514616F5E007C5F92 /* AudioToolbox.framework */,
@@ -484,7 +488,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,7 +506,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

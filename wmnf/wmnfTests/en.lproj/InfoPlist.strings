@@ -1,2 +1,6 @@
 /* Localized versions of Info.plist keys */
 
+<key>UIBackgroundModes</key>
+<array>
+<string>audio</string>
+</array>

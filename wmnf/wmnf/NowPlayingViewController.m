@@ -234,6 +234,19 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	
 	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(10.0, 310.0, 300.0, 60.0)];
 	[self.view addSubview:levelMeterView];
+
+
+    NSError *setCategoryErr = nil;
+    NSError *activationErr  = nil;
+    [[AVAudioSession sharedInstance]
+     setCategory: AVAudioSessionCategoryPlayback
+     error: &setCategoryErr];
+    //    [[AVAudioSessionsharedInstance]
+    //     setActive: YES
+    //     error: &activationErr];'
+
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -434,7 +447,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 		if ([streamParts count] >= 3) {
 			streamAlbum = [streamParts objectAtIndex:2];
 		} else {
-			streamAlbum = @"N/A";
+			streamAlbum = @"";
 		}
 	} else {
 		streamTitle = @"";
