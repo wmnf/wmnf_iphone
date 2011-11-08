@@ -14,6 +14,7 @@
 #import "NowPlayingViewController.h"
 //#import "StreamsViewController.h"
 #import "ChannelsViewController.h"
+#import "ContactViewController.h"
 
 @implementation AppDelegate
 
@@ -34,11 +35,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.uiIsVisible = YES;
-    UIViewController *viewController1, *viewController2;
+    UIViewController *viewController1, *viewController2, *viewController3;
     nowPlayingViewController = [[[NowPlayingViewController alloc] initWithNibName:@"NowPlayingViewController" bundle:nil] autorelease];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = nowPlayingViewController;
         viewController2 = [[[ChannelsViewController alloc] initWithNibName:@"ChannelsViewController" bundle:nil] autorelease];
+//        viewController3 = [[[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil] autorelease];
     } else {
         viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
         viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];

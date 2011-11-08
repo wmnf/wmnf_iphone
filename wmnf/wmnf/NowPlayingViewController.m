@@ -525,7 +525,18 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	[self createStreamer:[channelList objectAtIndex:channelIndex]];
     [streamer start];
 
-    
+    switch (channelIndex) {
+        case 0:
+            callButton.hidden = NO;
+            emailButton.hidden = NO;
+            phoneLabel.hidden = NO;
+            break;
+        default:
+            callButton.hidden = YES;
+            emailButton.hidden = YES;
+            phoneLabel.hidden = YES;
+            break;
+    }
     self.currentChannel = [NSString stringWithFormat:@"%d", channelIndex];
     NSLog(@"<<< Leaving %s >>>", __PRETTY_FUNCTION__);
 
@@ -549,6 +560,28 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	return YES;
 }
 
+- (IBAction)callButtonPressed:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]]; 
+}
+
+- (IBAction)emailButtonPressed:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
+}
+
+
+//********** SCREEN TOUCHED **********
+// - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+// {
+//     //See if touch was inside the label
+//     if (CGRectContainsPoint(phoneLabel.frame, [[[event allTouches] anyObject] locationInView:mainView])) {
+//         //Open webpage
+//         //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
+//         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]];
+//     }
+// }
+
 //
 // dealloc
 //
@@ -560,6 +593,8 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	[self createTimers:NO];
 	[levelMeterView release];
     [channelList release], channelList = nil;
+    [phoneLabel release];
+    [mainView release];
 	[super dealloc];
 }
 

@@ -28,6 +28,12 @@
 	IBOutlet UITextField *metadataArtist;
 	IBOutlet UITextField *metadataTitle;
 	IBOutlet UITextField *metadataAlbum;
+    IBOutlet UIButton *callButton;
+    IBOutlet UIButton *emailButton;
+    
+    IBOutlet UILabel *phoneLabel;
+    IBOutlet UIView *mainView;
+    
 	AudioStreamer *streamer;
 	NSTimer *progressUpdateTimer;
 	NSTimer *levelMeterUpdateTimer;
