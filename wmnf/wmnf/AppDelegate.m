@@ -42,8 +42,8 @@
         viewController2 = [[[ChannelsViewController alloc] initWithNibName:@"ChannelsViewController" bundle:nil] autorelease];
 //        viewController3 = [[[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil] autorelease];
     } else {
-        viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
-        viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
+        viewController1 = nowPlayingViewController;
+        viewController2 = [[[ChannelsViewController alloc] initWithNibName:@"ChannelsViewController" bundle:nil] autorelease];
     }
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];

@@ -524,17 +524,30 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
     appDelegate.tabBarController.selectedIndex = 0;
 	[self createStreamer:[channelList objectAtIndex:channelIndex]];
     [streamer start];
-
     switch (channelIndex) {
         case 0:
             callButton.hidden = NO;
             emailButton.hidden = NO;
             phoneLabel.hidden = NO;
             break;
+        case 1:
+            callButton.hidden = NO;
+            emailButton.hidden = NO;
+            phoneLabel.hidden = NO;
+            break;
+        case 2:
+            callButton.hidden = YES;
+            emailButton.hidden = NO;
+            phoneLabel.hidden = NO;
+            break;
+        case 3:
+            callButton.hidden = YES;
+            emailButton.hidden = NO;
+            phoneLabel.hidden = NO;
         default:
             callButton.hidden = YES;
-            emailButton.hidden = YES;
-            phoneLabel.hidden = YES;
+            emailButton.hidden = NO;
+            phoneLabel.hidden = NO;
             break;
     }
     self.currentChannel = [NSString stringWithFormat:@"%d", channelIndex];
@@ -562,12 +575,37 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 
 - (IBAction)callButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]]; 
+    switch ([currentChannel intValue]) {
+        case 0:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]]; 
+            break;
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-974-9285"]]; 
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)emailButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
+    switch ([currentChannel intValue]) {
+        case 0:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
+            break;
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd2@wmnf.org"]]; 
+            break;
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd3@wmnf.org"]]; 
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd4@wmnf.org"]]; 
+            break;
+        default:
+            break;
+    }
+   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
 }
 
 

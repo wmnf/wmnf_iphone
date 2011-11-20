@@ -41,6 +41,7 @@
 		C911D87214617172007C5F92 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C911D87114617172007C5F92 /* LevelMeterView.m */; };
 		C92134DD1461FA3C00886DFA /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92134DB1461FA3C00886DFA /* ChannelsViewController.m */; };
 		C92134DE1461FA3C00886DFA /* ChannelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92134DC1461FA3C00886DFA /* ChannelsViewController.xib */; };
+		C9505D69146C2DBC00D94556 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9505D68146C2DBC00D94556 /* Icon.png */; };
 		C9AE7EEA14617C5A003666A2 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE214617C5A003666A2 /* loadingbutton.png */; };
 		C9AE7EEB14617C5A003666A2 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE314617C5A003666A2 /* loadingbutton@2x.png */; };
 		C9AE7EEC14617C5A003666A2 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7EE414617C5A003666A2 /* pausebutton.png */; };
@@ -118,6 +119,7 @@
 		C92134DA1461FA3C00886DFA /* ChannelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelsViewController.h; sourceTree = "<group>"; };
 		C92134DB1461FA3C00886DFA /* ChannelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelsViewController.m; sourceTree = "<group>"; };
 		C92134DC1461FA3C00886DFA /* ChannelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelsViewController.xib; sourceTree = "<group>"; };
+		C9505D68146C2DBC00D94556 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C9AE7EE214617C5A003666A2 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
 		C9AE7EE314617C5A003666A2 /* loadingbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingbutton@2x.png"; sourceTree = "<group>"; };
 		C9AE7EE414617C5A003666A2 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				C9EFA8FF1465C95C00FEE456 /* icon_ipad.png */,
 				C9EFA8FD1465C8F600FEE456 /* Default@2x.png */,
+				C9505D68146C2DBC00D94556 /* Icon.png */,
 				C9EFA8FB1465C8EC00FEE456 /* icon@2x.png */,
 				C9EFA8F91465C8AD00FEE456 /* icon.png */,
 				C9EFA8F71465922000FEE456 /* Default.png */,
@@ -394,6 +397,7 @@
 				C9EFA8FE1465C8F600FEE456 /* Default@2x.png in Resources */,
 				C9EFA9001465C95C00FEE456 /* icon_ipad.png in Resources */,
 				C9EFA9051465CD5700FEE456 /* ContactViewController.xib in Resources */,
+				C9505D69146C2DBC00D94556 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,12 +515,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C90E1B8D1476B2F000C06D37 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WMNF Community Radio";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C90E1B8E1476B2F000C06D37 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WMNF Community Radio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WMNF Community Radio";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wmnf/wmnf-Prefix.pch";
+				INFOPLIST_FILE = "wmnf/wmnf-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		C90E1B8F1476B2F000C06D37 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wmnf.app/wmnf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wmnf/wmnf-Prefix.pch";
+				INFOPLIST_FILE = "wmnfTests/wmnfTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		C911D84F14616DBF007C5F92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -531,8 +597,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -541,7 +609,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -550,8 +619,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -563,11 +634,16 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WMNF Community Radio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WMNF Community Radio";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wmnf/wmnf-Prefix.pch";
 				INFOPLIST_FILE = "wmnf/wmnf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -579,11 +655,16 @@
 					armv6,
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WMNF Community Radio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: WMNF Community Radio";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wmnf/wmnf-Prefix.pch";
 				INFOPLIST_FILE = "wmnf/wmnf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86806E52-C238-47E8-AA2D-DCFBB11A68EA";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -630,6 +711,7 @@
 			buildConfigurations = (
 				C911D84F14616DBF007C5F92 /* Debug */,
 				C911D85014616DBF007C5F92 /* Release */,
+				C90E1B8D1476B2F000C06D37 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -639,6 +721,7 @@
 			buildConfigurations = (
 				C911D85214616DBF007C5F92 /* Debug */,
 				C911D85314616DBF007C5F92 /* Release */,
+				C90E1B8E1476B2F000C06D37 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -648,6 +731,7 @@
 			buildConfigurations = (
 				C911D85514616DBF007C5F92 /* Debug */,
 				C911D85614616DBF007C5F92 /* Release */,
+				C90E1B8F1476B2F000C06D37 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
