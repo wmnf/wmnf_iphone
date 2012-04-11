@@ -1,1 +1,23 @@
-This is the native iphone/ipad app for WMNF Community Radio.
+This is the native iphone/ipad app for [WMNF Community Radio](http://www.wmnf.org).
+
+## To contribute: 
+* Fork the project
+* Make your excellent bug fixes or new features, preferably in a topic branch
+* Test 5 ways from Sunday
+* Commit
+* Send a pull request
+
+
+## To adapt this to your community radio station:
+* Fork the project
+* Change the lists of channels and stream urls
+* Replace the logo
+* Build and submit to Apple
+
+## Copyright
+copyright (c) 2011, 2012 Nathan B. Stubblefield Foundation, Inc.
+
+see LICENSE for details
+
+If you find this project useful, we encourage you to contribute to keeping WMNF Community Radio on the air. Make a donation [here](http://www.wmnf.org/give).  Thanks!
+
