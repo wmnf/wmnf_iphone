@@ -21,3 +21,7 @@ see LICENSE for details
 
 If you find this project useful, we encourage you to contribute to keeping WMNF Community Radio on the air. Make a donation [here](http://www.wmnf.org/give).  Thanks!
 
+
+## Thanks
+* Portions of this project were inspired...err.. stolen from https://github.com/mattgallagher/AudioStreamer
+* Jeff Putney and [Infinite Monkey](http://www.infinitemonkeydesign.com) created the excellent first version of the WMNF app.
