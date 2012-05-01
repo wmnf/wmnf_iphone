@@ -14,6 +14,13 @@ This is the native iphone/ipad app for [WMNF Community Radio](http://www.wmnf.or
 * Replace the logo
 * Build and submit to Apple
 
+## Roadmap
+A few updates we'd like to get in soonish:
+
+* UI beautificatory enhancements
+* pull in content from wmnf.org - events, news stories, etc (via restkit?)
+* access to archived audio
+
 ## Copyright
 copyright (c) 2011, 2012 Nathan B. Stubblefield Foundation, Inc.
 
